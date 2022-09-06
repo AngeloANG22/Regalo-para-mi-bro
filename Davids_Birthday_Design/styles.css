@@ -1,0 +1,534 @@
+*
+{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+html 
+{
+    
+    position: relative;
+    scroll-behavior: smooth;
+}
+body
+{
+    background-image: url(./imgs/Fondo.png);
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body
+{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.cuerpo
+{
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+}
+
+header a
+{
+    font-size: 2.0em;
+    padding: 5px 12px;
+}
+
+header
+{ 
+    width: 100%;
+    height: 14.30745814307458vh;
+    margin: 0;
+    
+    left: 0;
+    top: 0;
+    right: 0;
+    max-width: 1360px;
+
+    background-image: url(./imgs/header_t.png);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    object-fit: cover;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+header .container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header nav, a, .text
+{
+    margin: 0;
+    padding: 0;
+}
+header a
+{
+    color: #daa520;
+    text-decoration: none;
+    position: relative;
+    left: -20px;
+    
+    display: flex;
+    align-content: center;
+    text-align: center;
+    transition: 0.5s;
+}
+
+header a:hover
+{
+    color: #FFD700;
+}
+
+
+.cuadrito a:hover
+{
+    color: black;
+}
+
+.cuadrito
+{
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dos
+{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cuadrito-tres
+{
+    padding: 10px;
+}
+
+.cuadrito-tres h1 
+{
+    font-weight: 800;
+    font-family: Trebuchet, Century, italic, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    text-align: center; 
+    transition: all 0.5s;
+    line-height: 1.3em;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+.Imagenes
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px; 
+    padding: 40px 0;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.Imagenes img
+{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.Imagenes > a
+{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5)
+}
+
+.Imagenes a:hover img
+{
+    filter: blur(1.5px);
+    transform: scale(1.5); 
+}
+
+.Box
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box img
+{
+    width: 75vw;
+    max-height: 70vh;
+}
+
+.Box:target
+{
+    transform: scale(1);
+}
+
+.close
+{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: aliceblue;
+    background: rgba(250, 250, 210, 0.5);
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next
+{
+    display: block;
+    color: aliceblue;
+    background: rgba(250, 250, 210, 0.5);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Boton
+{
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.6), 0 0 0 0 rgba(205, 92, 92);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+.Boton 
+{
+    width: 60%;
+    padding: 10px 20px;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    color: #000;
+    text-decoration: none;
+}
+
+.Boton::after
+{
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background: #F4A460;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+    display: inline-block;
+    cursor: context-menu;
+}
+
+.Boton:hover
+{
+    transform: translate(0, -6);
+    box-shadow: 10px -10px 25px 0 rgba(240, 128, 128, 0.5), -10px 10px 25px 0 rgba(218, 165, 32, 0.5);
+}
+
+.Boton:hover::after
+{
+    transform: rotate(150deg);
+}
+
+.dos a:visited
+{
+    color: #000;
+}
+
+.dos a:active
+{
+    color: #000;
+}
+
+.Box-video
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box-video:target 
+{
+    transform: scale(1);
+}
+
+.Box-video video 
+{
+    width: 75vw;
+    max-height: 70vh;
+}
+
+.Box-regalo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box-regalo:target
+{
+    transform: scale(1);
+}
+
+.Box-regalo img 
+{
+    width: 20vw;
+    max-height: 70vh;
+}
+
+
+.Box-regalo h1
+{
+    position: absolute;
+    top: 20px;
+    color: #daa520;
+    background: #000;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.btn-download
+{
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #f0f8ff;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    color: #000;
+    transition: all 400ms ease-out;
+    bottom: 40px;
+    right: 40px;
+}
+
+.btn-download:hover
+{
+    transform: scale(1.1);
+}
+
+footer 
+{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url(../Davids_Birthday_Design/imgs/background-footer.svg);
+    background-size: cover;
+    align-self: flex-end;
+}
+
+
+.container-f 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box-f
+{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box-f .logo img
+{
+    width: 180px;
+}
+
+.box-f h2
+{
+    margin-bottom: 30px;
+    color: #696969;
+    font-weight: 700;
+}
+
+.box-f .Agradecimientos
+{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #778899;
+    font-size: 18px;
+}
+
+.box-f a
+{
+    margin-top: 10px;
+    color: #B0C4DE;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+
+.box-f a:hover
+{
+    color: #808080;
+}
+
+.box-copyright
+{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0 40px;
+}
+.box-copyright p
+{
+    padding-top: 20px;
+    color: #778899;
+}
+
+.box-copyright hr
+{
+    border: none;
+    height: 2px;
+    background-color: #778899;
+}
+
+
+@media screen and (max-width: 600px)
+{
+    header
+    {
+        width: 100%;
+        height: 14.30745814307458vh;
+        
+        background-image: url(../Davids_Birthday_Design/imgs/header-\ mobile.png);
+    }
+
+    header a
+    {
+        position: relative;
+        left: 0.1px;
+    }
+
+    .Boton
+    {
+        width: 140px;
+        color: #000;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    .Boton
+    {
+        border-radius: 100px;
+    }
+
+    .Imagenes
+    {
+        grid-template-columns: repeat(auto-fit, minmax (200px 1fr));
+    }
+
+    .close
+    {
+        top: 20px;
+        right: 20px;
+    }
+
+    .btn-download
+    {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .Box-regalo img 
+    {
+        width: 60vw;
+        max-height: 90vh;
+    }
+
+    .Box-regalo h1
+    {
+        top: 0;
+        background: none;
+    }
+}
